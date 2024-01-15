@@ -8,11 +8,11 @@ btn_setBrick.addEventListener('click', ()=> {
     const current_brick = document.querySelector(".current").getBoundingClientRect();
     const old_brick = document.querySelector(".old").getBoundingClientRect();
 
-    // Abbruch rechts
+    // Abbruchstelle rechts
     if((current_brick.x + current_brick.width) > (old_brick.x + old_brick.width)) {
         console.log('Abbruch rechts');
-        const abboard_right = (current_brick.x + current_brick.width) - (old_brick.x + old_brick.width);
-        console.log('abboard_right', abboard_right);
+        const demolition_right = (current_brick.x + current_brick.width) - (old_brick.x + old_brick.width);
+        console.log('demolition_right', demolition_right);
     }
 
     // Abbruch links
