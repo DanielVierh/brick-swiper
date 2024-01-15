@@ -25,4 +25,48 @@ body {
   scroll-behavior: smooth;
   background-color: rgba(0, 0, 0, 0.874);
   color: white;
+  overflow: clip;
+}
+
+.bick-wrapper {
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  background-color: rgb(19, 19, 19);
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgb(58, 58, 58);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.bick-wrapper .brick {
+  height: 20px;
+  width: 170px;
+  background-color: red;
+  margin: 2px auto 0 auto;
+}
+.bick-wrapper .brick.swipe {
+  animation: swiper 19s linear infinite;
+  width: 90px;
+}
+
+@keyframes swiper {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.action-button {
+  margin: 50px auto 0 auto;
+  width: fit-content;
+  background-color: rgb(13, 80, 102);
+  padding: 10px 20px;
+  border-radius: 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
