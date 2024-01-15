@@ -27,8 +27,7 @@ body {
 
 
 .bick-wrapper { 
-    width: 100%;
-    max-width: 600px;
+    width: 300px;
     height: 80vh;
     background-color: rgb(19, 19, 19);
     margin: 0 auto;
@@ -40,29 +39,27 @@ body {
 
     .brick {
         height: 20px;
-        width: 170px;
         background-color: red;
-        margin: 2px auto 0 auto;
+        width: 250px;
        
 
         &.swipe {
-            animation: swiper 19s linear infinite;
-            width: 90px;
+            animation: swiper 3s linear infinite;
         }
     }
 }
 
 @keyframes swiper {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-120%);
     }
 
     50% {
-        transform: translateX(100%);
+        transform: translateX(120%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-120%);
     }
 }
 
