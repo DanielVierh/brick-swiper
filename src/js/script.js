@@ -12,7 +12,7 @@ let round = 1;
 const winnerRound = 30;
 let velocity = 3;
 
-const brickColors = ['red', 'yellow', 'green', 'blue'];
+const brickColors = ['red', 'yellow', 'green', 'blue', 'lightblue'];
 
 btn_setBrick.addEventListener('click', () => {
     //* im Bereich des vorherigen = old_X + width

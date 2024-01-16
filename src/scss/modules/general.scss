@@ -40,6 +40,7 @@ body {
         position: absolute;
         bottom: 0;
         left: 0;
+        transform: translateX(-50%);
 
         &.swipe {
             animation: swiper 3s linear infinite;
