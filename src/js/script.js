@@ -9,7 +9,7 @@ let new_width = 300;
 const looser_width = 3;
 let stack_height = 20;
 let round = 1;
-const winnerRound = 5;
+const winnerRound = 30;
 let velocity = 3;
 
 const brickColors = ['red', 'yellow', 'green', 'blue'];
@@ -27,6 +27,7 @@ btn_setBrick.addEventListener('click', () => {
         if(new_width <= 3) {
             modal.classList.add('active');
             modal_lbl.innerHTML = 'Game Over';
+            document.getElementById('lbl_roundInfo').innerHTML = `${round} Runden geschafft`;
             document.querySelector(".current").classList.remove('swipe');
         }
         console.log('current_brick.x', current_brick.x);
@@ -58,6 +59,7 @@ btn_setBrick.addEventListener('click', () => {
         if(new_width <= 3) {
             modal.classList.add('active');
             modal_lbl.innerHTML = 'Game Over';
+            document.getElementById('lbl_roundInfo').innerHTML = `${round} Runden geschafft`;
             document.querySelector(".current").classList.remove('swipe');
         }
         document.querySelector(".current").classList.remove('swipe');
@@ -84,9 +86,11 @@ btn_setBrick.addEventListener('click', () => {
         alert('Genau getroffen :)')
     }
     round++;
+    document.getElementById('lbl_round').innerHTML = `Brick ${round}/${winnerRound}`
     if(round === winnerRound) {
         modal.classList.add('active');
         modal_lbl.innerHTML = 'Gewonnen 😄';
+        document.getElementById('lbl_roundInfo').innerHTML = '30 Runden geschafft';
         document.querySelector(".current").classList.remove('swipe');
     }
 })
