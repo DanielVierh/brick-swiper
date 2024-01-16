@@ -10,7 +10,7 @@ const looser_width = 3;
 let firstBrick = true;
 let stack_height = 20;
 let round = 1;
-const winnerRound = 30;
+const winnerRound = 5;
 let velocity = 3;
 
 const brickColors = ['red', 'yellow', 'green', 'blue'];
@@ -84,7 +84,12 @@ btn_setBrick.addEventListener('click', () => {
     } else {
         alert('Genau getroffen :)')
     }
-    console.log('velocity', velocity);
+    round++;
+    if(round === winnerRound) {
+        modal.classList.add('active');
+        modal_lbl.innerHTML = 'Gewonnen 😄';
+        document.querySelector(".current").classList.remove('swipe');
+    }
 })
 
 //* Neustart
