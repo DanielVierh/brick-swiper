@@ -49,7 +49,7 @@ btn_setBrick.addEventListener('click', () => {
         new_Brick.style.bottom = `${stack_height}px`;
         const brick_colorIndex = Math.floor(Math.random() * brickColors.length) + 1;
         new_Brick.style.backgroundColor = `${brickColors[brick_colorIndex]}`;
-        velocity = velocity -= .15;
+        velocity = velocity -= .1;
         new_Brick.style.animationDuration = `${velocity}s`;
         brick_wrapper.insertBefore(new_Brick, brick_wrapper.firstChild);
         //* Abbruchstelle links
@@ -78,7 +78,7 @@ btn_setBrick.addEventListener('click', () => {
         new_Brick.style.bottom = `${stack_height}px`;
         const brick_colorIndex = Math.floor(Math.random() * brickColors.length) + 1;
         new_Brick.style.backgroundColor = `${brickColors[brick_colorIndex]}`;
-        velocity = velocity -= .15;
+        velocity = velocity -= .1;
         new_Brick.style.animationDuration = `${velocity}s`;
         brick_wrapper.insertBefore(new_Brick, brick_wrapper.firstChild);
 
