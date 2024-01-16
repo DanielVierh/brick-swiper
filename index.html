@@ -10,11 +10,16 @@
 <body>
 
     <div class="bick-wrapper" id="brick_wrapper">
-        <div class="brick swipe current"></div>
-        <div class="brick old" style="margin: 0 auto;"></div>
+        <div class="brick swipe current" style="bottom: 20px;"></div>
+        <div class="brick old" style="margin: 0 auto; transform: translateX(0);"></div>
     </div>
 
     <div class="action-button" id="btn_setBrick">Stopp</div>
+
+    <div class="modal" id="modal">
+        <h2 id="modal_lbl"></h2>
+        <div class="action-button" id="btn_restart">Neustart</div>
+    </div>
 
     <script src="public/javascript/main.js"></script>
 </body>

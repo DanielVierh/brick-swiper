@@ -25,23 +25,21 @@ body {
   scroll-behavior: smooth;
   background-color: rgba(0, 0, 0, 0.874);
   color: white;
-  overflow: clip;
 }
 
 .bick-wrapper {
   width: 300px;
   height: 80vh;
-  background-color: rgb(19, 19, 19);
   margin: 0 auto;
-  box-shadow: 0 0 15px rgb(58, 58, 58);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
 }
 .bick-wrapper .brick {
   height: 20px;
   background-color: red;
   width: 250px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .bick-wrapper .brick.swipe {
   animation: swiper 3s linear infinite;
@@ -66,4 +64,29 @@ body {
   border-radius: 15px;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  left: 200%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.9s ease-in-out;
+}
+.modal.active {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.modal h2 {
+  font-size: 2rem;
+  letter-spacing: 3px;
 }
