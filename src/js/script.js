@@ -12,7 +12,7 @@ let round = 1;
 const winnerRound = 30;
 let velocity = 3;
 
-const brickColors = ['red', 'yellow', 'green', 'blue', 'lightblue'];
+const brickColors = ['red', 'yellow', 'green', 'blue', 'lightblue', 'tomato'];
 
 btn_setBrick.addEventListener('click', () => {
     //* im Bereich des vorherigen = old_X + width
@@ -30,9 +30,7 @@ btn_setBrick.addEventListener('click', () => {
             document.getElementById('lbl_roundInfo').innerHTML = `${round} Runden geschafft`;
             document.querySelector(".current").classList.remove('swipe');
         }
-        console.log('current_brick.x', current_brick.x);
         x_anker = (current_brick.x + demolition_right);
-        console.log('x_anker', x_anker);
         document.querySelector(".current").left = x_anker;
         document.querySelector(".current").classList.remove('swipe');
         document.querySelector(".old").classList.remove('old');

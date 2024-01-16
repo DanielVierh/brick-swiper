@@ -40,7 +40,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateX(-50%);
 }
 .bick-wrapper .brick.swipe {
   animation: swiper 3s linear infinite;
