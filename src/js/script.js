@@ -7,7 +7,6 @@ const modal_lbl = document.getElementById('modal_lbl');
 let x_anker = 0;
 let new_width = 300;
 const looser_width = 3;
-let firstBrick = true;
 let stack_height = 20;
 let round = 1;
 const winnerRound = 5;
