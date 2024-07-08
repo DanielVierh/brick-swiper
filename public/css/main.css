@@ -25,16 +25,17 @@ body {
   scroll-behavior: smooth;
   background: radial-gradient(blue, black);
   color: white;
+  height: 100vh;
 }
 
 .bick-wrapper {
   width: 300px;
-  height: 80vh;
+  min-height: 80vh;
   margin: 0 auto;
   position: relative;
 }
 .bick-wrapper .brick {
-  height: 20px;
+  height: 10px;
   background-color: red;
   width: 250px;
   position: absolute;
@@ -62,7 +63,8 @@ body {
 .action-button {
   margin: 30px auto 0 auto;
   width: fit-content;
-  background-color: rgb(13, 80, 102);
+  background-color: rgba(13, 80, 102, 0.3);
+  box-shadow: 0 0 40px white;
   padding: 10px 20px;
   border-radius: 15px;
   letter-spacing: 2px;

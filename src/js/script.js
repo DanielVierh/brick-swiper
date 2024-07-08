@@ -1,20 +1,25 @@
-const btn_setBrick = document.getElementById('btn_setBrick');
 const bricks = document.querySelectorAll('.brick');
 const brick_wrapper = document.getElementById('brick_wrapper');
 const btn_restart = document.getElementById('btn_restart');
 const modal = document.getElementById('modal');
 const modal_lbl = document.getElementById('modal_lbl');
+const lbl_round = document.getElementById('lbl_round');
+const bdy = document.getElementById('bdy')
+
 let x_anker = 0;
 let new_width = 300;
 const looser_width = 3;
-let stack_height = 20;
+let stack_height = 10;
 let round = 1;
-const winnerRound = 30;
+const winnerRound = 35;
 let velocity = 3;
 
 const brickColors = ['red', 'yellow', 'green', 'blue', 'lightblue', 'tomato'];
 
-btn_setBrick.addEventListener('click', () => {
+lbl_round.innerHTML = `Brick ${round}/${winnerRound}`
+
+
+function set_brick() {
     const current_brick = document.querySelector(".current").getBoundingClientRect();
     const old_brick = document.querySelector(".old").getBoundingClientRect();
 
@@ -48,11 +53,11 @@ btn_setBrick.addEventListener('click', () => {
         modal.classList.add('active');
         modal_lbl.innerHTML = 'Gewonnen 😄';
         modal_lbl.style.color = 'green';
-        document.getElementById('lbl_roundInfo').innerHTML = '30 Runden geschafft';
+        document.getElementById('lbl_roundInfo').innerHTML = `${winnerRound} Runden geschafft`;
         document.querySelector(".current").classList.remove('swipe');
     }
-    document.getElementById('lbl_round').innerHTML = `Brick ${round}/${winnerRound}`
-})
+    lbl_round.innerHTML = `Brick ${round}/${winnerRound}`
+}
 
 function check_game_status() {
     if(new_width <= 3) {
@@ -78,7 +83,7 @@ function create_new_Brick() {
     new_Brick.classList.add('current');
     new_Brick.style.width = `${new_width}px`;
     new_Brick.style.left = `translateX(${x_anker}px)`;
-    stack_height = stack_height + 20;
+    stack_height = stack_height + 10;
     new_Brick.style.bottom = `${stack_height}px`;
     const brick_colorIndex = Math.floor(Math.random() * brickColors.length) + 1;
     new_Brick.style.backgroundColor = `${brickColors[brick_colorIndex]}`;
@@ -93,5 +98,9 @@ function create_new_Brick() {
 //* Neustart
 btn_restart.addEventListener('click', ()=> {
     window.location.reload();
+})
+
+bdy.addEventListener('click', ()=> {
+    set_brick();
 })
 
